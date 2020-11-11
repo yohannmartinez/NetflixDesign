@@ -12,21 +12,28 @@ class Landing extends React.Component {
 
     componentDidMount() {
         console.log(process.env)
-        axios.get(`https://api.themoviedb.org/3/trending/tv/week?api_key=${process.env.REACT_APP_API_TOKEN}&language=en-FR`).then((res) => this.setState({ series: res.data.results.splice(0,5) }))
+        axios.get(`https://api.themoviedb.org/3/trending/tv/week?api_key=${process.env.REACT_APP_API_TOKEN}&language=en-FR`).then((res) => this.setState({ series: res.data.results.splice(0, 5) }))
     }
 
     render() {
         return (
-            <div onClick={()=>{console.log(this.state)}}>
+            <React.Fragment>
                 {this.state.series &&
-                    <React.Fragment>
-                        {this.state.series.map((serie)=>(
-                            <div>{serie.original_name}</div>
-                        ))}
-                    </React.Fragment>
-                }
 
-            </div>
+                    <div onClick={() => { console.log(this.state) }} className="landing__globalContainer">
+                        <div className="landing__trendingContainer">
+                            {this.state.series[0].original_name}
+                        </div>
+
+                        <React.Fragment>
+                            {this.state.series.map((serie) => (
+                                <div>{serie.original_name}</div>
+                            ))}
+                        </React.Fragment>
+
+                    </div>
+                }
+            </React.Fragment>
         )
     }
 }
