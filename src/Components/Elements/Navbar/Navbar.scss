@@ -2,9 +2,9 @@
   &__globalContainer {
     height: 70px;
     padding: 0 2em;
-    background: transparent;
     display: flex;
     justify-content: space-between;
+    transition: 0.5s;
     align-items: center;
     color: #fff;
     position: fixed;
