@@ -21,8 +21,8 @@ class Landing extends React.Component {
       .then(res => this.setState({ series: res.data.results.splice(0, 5) }));
   }
 
-  handleClick = () => {
-    window.location.href = `http://localhost:3000/series/${this.state.series.id}`;
+  handleClick = (serie_id) => {
+    window.location.href = "/serie/" + serie_id
   }
 
   render() {
@@ -47,9 +47,8 @@ class Landing extends React.Component {
 
             <div className="trendingCard__globalContainer">
               {this.state.series.splice(1, 4).map(serie => (
-                <div>
+                <div onClick={()=>{this.handleClick(serie.id)}}>
                   <TrendingCard
-                  onClick={this.handleClick}
                     title={serie.name}
                     imageSerie={
                       process.env.REACT_APP_IMAGE_LINK + serie.backdrop_path

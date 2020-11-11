@@ -15,6 +15,7 @@ class SelectedSeason extends React.Component {
             <div>
                 {this.props.season &&
                     <div className="selectedSeason__entete" style={{ backgroundImage: `url('${process.env.REACT_APP_IMAGE_LINK + this.props.season.poster_path}')` }}>
+                        {this.props.season.name}
                     </div>
                 }
             </div>
