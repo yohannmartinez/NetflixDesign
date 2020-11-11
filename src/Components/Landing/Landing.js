@@ -21,7 +21,7 @@ class Landing extends React.Component {
                 {this.state.series &&
 
                     <div onClick={() => { console.log(this.state) }} className="landing__globalContainer">
-                        <div className="landing__trendingContainer">
+                        <div className="landing__trendingContainer" style={{backgroundImage : `url('${process.env.REACT_APP_IMAGE_LINK + this.state.series[0].backdrop_path}')`}}>
                             {this.state.series[0].original_name}
                         </div>
 
