@@ -2,7 +2,7 @@
   &__globalContainer {
     height: 70px;
     padding: 0 2em;
-    background: black;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +20,10 @@
   &__linkLeft {
     margin-right: 20px;
     cursor: pointer;
+    &:hover {
+      font-weight: 800;
+      transition: 0.3s;
+    }
   }
 
   &__imgProfil {

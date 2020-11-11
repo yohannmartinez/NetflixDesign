@@ -1,14 +1,14 @@
-import React from 'react'
-import axios from "axios"
-import "./Landing.scss"
+import React from 'react';
+import axios from 'axios';
+import './Landing.scss';
 
 class Landing extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            series: null
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      series: null
+    };
+  }
 
     componentDidMount() {
         console.log(process.env)
@@ -38,4 +38,4 @@ class Landing extends React.Component {
     }
 }
 
-export default Landing 
+export default Landing;
