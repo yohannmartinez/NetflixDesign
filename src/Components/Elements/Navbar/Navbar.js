@@ -3,8 +3,8 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { BiBell } from 'react-icons/bi';
 
 import './Navbar.scss';
-import Profil from './images/profil.jpg'
-import Logo from './images/logo.png'
+import Profil from '../../../assets/Navbar/profil.jpg'
+import Logo from '../../../assets/Navbar/logo.png'
 
 class Navbar extends Component {
   render() {
