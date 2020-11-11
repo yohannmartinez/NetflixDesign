@@ -1,0 +1,44 @@
+.navbar {
+  &__globalContainer {
+    height: 60px;
+    padding: 0 2em;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: relative;
+  }
+
+  &__linkRight {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  &__linkLeft {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  &__imgProfil {
+    height: 25px;
+    width: 25px;
+  }
+
+  &__logo {
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+}
