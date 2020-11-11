@@ -13,8 +13,7 @@ class Serie extends React.Component {
     }
 
     componentDidMount() {
-        console.log(window.location)
-        Axios.get(`http://api.themoviedb.org/3/tv/${window.location.pathname.split("/")[2]}?api_key=${process.env.REACT_APP_API_TOKEN}&append_to_response=videos`).then((res) => {
+        Axios.get(`http://api.themoviedb.org/3/tv/${window.location.pathname.split("/")[2]}?api_key=${process.env.REACT_APP_API_TOKEN}&append_to_response=episodes`).then((res) => {
             this.setState({ serie: res.data })
         })
     }
@@ -24,7 +23,7 @@ class Serie extends React.Component {
             <React.Fragment>
                 {this.state.serie &&
                     <div onClick={() => { console.log(this.state) }}>
-                        <SeasonsCarousel seasons={this.state.serie.seasons} />
+                        <SeasonsCarousel seasons={this.state.serie.seasons} serieId={window.location.pathname.split("/")[2]}/>
                     </div>
                 }
             </React.Fragment>

@@ -13,7 +13,7 @@ class SeasonsCarousel extends React.Component {
     render() {
         return (
             <div>
-                <SelectedSeason season={this.props.seasons[this.state.selectedSeason]} seasonNumber={this.state.selectedSeason} />
+                <SelectedSeason season={this.props.seasons[this.state.selectedSeason]} seasonNumber={this.state.selectedSeason} serieId={this.props.serieId}/>
 
             </div>
         )
