@@ -26,7 +26,7 @@ class Landing extends React.Component {
                         </div>
 
                         <React.Fragment>
-                            {this.state.series.map((serie) => (
+                            {this.state.series.splice(1,4).map((serie) => (
                                 <div>{serie.original_name}</div>
                             ))}
                         </React.Fragment>
