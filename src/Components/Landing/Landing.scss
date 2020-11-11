@@ -1,10 +1,33 @@
-.landing{
-    &__globalContainer{
-        border:1px solid red;
+.landing {
+  &__trendingContainer {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 7em;
+      width: 100%;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
+  }
+}
 
-    &__trendingContainer{
-        border:1px solid blue;
-        height:100vh;
-    }
+.trendingCard {
+  &__globalContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em;
+    position: relative;
+    margin-top: -90px;
+  }
 }
