@@ -1,13 +1,15 @@
 .navbar {
   &__globalContainer {
-    height: 60px;
+    height: 70px;
     padding: 0 2em;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    position: relative;
+    position: fixed;
+    width:100%;
+    box-sizing: border-box;
   }
 
   &__linkRight {
@@ -30,7 +32,7 @@
   }
 
   &__logo {
-    height: 50px;
+    height: 70px;
     position: absolute;
     left: 50%;
     top: 50%;
