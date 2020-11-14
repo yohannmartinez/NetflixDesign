@@ -22,8 +22,8 @@ class Serie extends React.Component {
         return (
             <React.Fragment>
                 {this.state.serie &&
-                    <div onClick={() => { console.log(this.state) }}>
-                        <SeasonsCarousel seasons={this.state.serie.seasons} serieId={window.location.pathname.split("/")[2]}/>
+                    <div >
+                        <SeasonsCarousel serieInfos={this.state.serie} seasons={this.state.serie.seasons} serieId={window.location.pathname.split("/")[2]}/>
                     </div>
                 }
             </React.Fragment>

@@ -1,0 +1,12 @@
+.seasons{
+
+    &__carouselContainer{
+        width:100%;
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__seasonsContainer{
+        display: flex;
+    }
+}

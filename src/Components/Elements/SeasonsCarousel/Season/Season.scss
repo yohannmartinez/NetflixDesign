@@ -1,0 +1,51 @@
+.season{
+
+    &__globalContainer{
+        color:white;
+        height:max-content;
+        position: relative;
+    }
+
+    &__entete{
+        height:100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__serieInfos{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__enteteBackground{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-size: cover;
+        background-position: center;
+        z-index:-1;
+        filter:brightness(50%);
+    }
+
+    &__episodesContainer{
+        display: flex;
+        flex-grow: 1;
+        width:100vw;
+        overflow: hidden;
+    }
+
+    &__details{
+        background-color: black
+    }
+
+    &__detailsTitle{
+        margin-top: 0;
+        padding-top: 1em;
+    }
+}
